@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacked By F9.HaCkEr</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; 
+    }
+
+    .content {
+  height: 100vh;
+  padding-top: 520px; 
+  text-align: center;
+  color: #695d59;
+  font-size: 28px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+    #typewriter {
+      border-right: 2px solid #0e0404;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 1s step-start infinite;
+      font-weight: bold;
+font-family:'Courier New', Courier, monospace;
+
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <video autoplay muted loop id="bg-video">
+    <source src="C:\Users\STARS\Documents\bg.mp4" type="video/mp4" />
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+
+  
+  <div class="content">
+    <div id="typewriter"></div>
+  </div>
+
+  <script>
+    const text = "Hacked By F9.HaCkEr";
+    let i = 0;
+    const speed = 100;
+
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter();
+
+    
+  </script>
+
+  
+</body>
+</html>
